@@ -3,7 +3,7 @@
     <rect width="800" height="900" fill="url(#g)"/>
     <circle cx="400" cy="330" r="150" fill="#fff" opacity=".14"/>
     <circle cx="400" cy="300" r="105" fill="#fff" opacity=".18"/>
-    <text x="400" y="350" text-anchor="middle" font-family="Arial" font-size="130" font-weight="700" fill="#fff">85+</text>
+    <text x="400" y="350" text-anchor="middle" font-family="Arial" font-size="130" font-weight="700" fill="#fff">145</text>
     <text x="400" y="600" text-anchor="middle" font-family="Arial" font-size="42" font-weight="700" fill="#fff">Dharani Motors Team</text>
     <text x="400" y="660" text-anchor="middle" font-family="Arial" font-size="26" fill="#f6dfb2">Sales • Service • Parts • Support</text>
     </svg>
