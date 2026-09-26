@@ -571,6 +571,92 @@ footer strong{
     color:#fff
 }
 
+
+/* ===== NEW WEBSITE FEATURES ===== */
+.location{cursor:pointer;}
+.location::after{
+    content:"VIEW LOCATION →";
+    position:absolute; right:18px; bottom:16px;
+    font-size:9px; font-weight:800; letter-spacing:1px;
+    color:#9a6d22; opacity:.85;
+}
+.location:hover::after{opacity:1;}
+
+.vision{background:linear-gradient(135deg,#0b111b,#172235);color:#fff;}
+.vision-box{max-width:900px;margin:auto;text-align:center;padding:10px 20px;}
+.vision-box h2{font-family:"Playfair Display",serif;font-size:clamp(36px,5vw,58px);margin:10px 0 16px;}
+.vision-box p{max-width:760px;margin:0 auto;color:#c9d1dc;font-size:18px;}
+.vision-highlight{color:#e8c477;font-weight:800;}
+
+.five-fingers-caption{
+    text-align:center;margin:35px auto 0;max-width:820px;
+    font-family:"Playfair Display",serif;font-size:24px;line-height:1.35;color:#e8c477;
+}
+.five-fingers-caption span{
+    display:block;margin-top:8px;font-family:Inter,Arial,sans-serif;
+    font-size:12px;color:#aeb8c6;letter-spacing:1.6px;text-transform:uppercase;font-weight:700;
+}
+
+.dashboard{background:#f8f5ee;}
+.dashboard-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.dealer-dashboard{background:#fff;border:1px solid var(--line);padding:28px;position:relative;overflow:hidden;}
+.dealer-dashboard:before{content:"";position:absolute;left:0;top:0;width:5px;height:100%;background:var(--gold);}
+.dealer-dashboard h3{margin:0 0 5px;font-family:"Playfair Display",serif;font-size:28px;}
+.dashboard-subtitle{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:1.2px;}
+.kpis{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px;}
+.kpi{border:1px solid var(--line);padding:18px;background:linear-gradient(145deg,#fff,#faf7f0);}
+.kpi strong{display:block;font-size:27px;}
+.kpi small{color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:1px;}
+.kpi-note{margin-top:18px;color:#9a6d22;font-size:11px;font-weight:700;}
+
+.location-modal{
+    position:fixed;inset:0;background:rgba(7,12,20,.78);backdrop-filter:blur(7px);
+    display:none;align-items:center;justify-content:center;z-index:100;padding:20px;
+}
+.location-modal.open{display:flex;}
+.location-modal-card{
+    width:min(1050px,96vw);max-height:92vh;overflow:auto;background:#fff;
+    border-radius:8px;box-shadow:0 25px 80px rgba(0,0,0,.35);
+}
+.location-modal-head{
+    display:flex;align-items:center;justify-content:space-between;gap:20px;
+    padding:22px 26px;border-bottom:1px solid var(--line);
+}
+.location-modal-head h3{margin:0;font-family:"Playfair Display",serif;font-size:30px;}
+.location-modal-close{
+    border:0;background:#0b111b;color:#fff;width:38px;height:38px;
+    border-radius:50%;cursor:pointer;font-size:20px;
+}
+.location-modal-body{padding:24px 26px 30px;}
+.location-hours{
+    display:inline-flex;gap:8px;align-items:center;margin-bottom:18px;
+    padding:8px 12px;background:#f8f5ee;border:1px solid var(--line);
+    color:#8a6426;font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:1px;
+}
+.map-frame{width:100%;height:360px;border:0;background:#f1eee7;display:block;}
+.map-placeholder{
+    height:360px;display:grid;place-items:center;text-align:center;padding:30px;
+    background:linear-gradient(145deg,#f8f5ee,#eee8db);color:#697386;
+}
+.map-placeholder strong{display:block;color:#101827;font-size:18px;margin-bottom:6px;}
+.showroom-title{margin:26px 0 12px;font-family:"Playfair Display",serif;font-size:24px;}
+.showroom-images{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+.showroom-images img{width:100%;height:190px;object-fit:cover;border:1px solid var(--line);}
+.image-placeholder{
+    min-height:190px;display:grid;place-items:center;text-align:center;padding:20px;
+    background:#faf7f0;border:1px dashed #cdbf9f;color:#8a6426;font-size:11px;
+    font-weight:700;letter-spacing:.8px;
+}
+@media(max-width:850px){
+    .dashboard-grid{grid-template-columns:1fr;}
+    .showroom-images{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:520px){
+    .showroom-images{grid-template-columns:1fr;}
+    .map-frame,.map-placeholder{height:280px;}
+    .five-fingers-caption{font-size:20px;}
+}
+
 @media(max-width:850px){
 
     .links{
@@ -733,12 +819,12 @@ footer strong{
 </div>
 
 <div class="stat">
-    <b>14</b>
+    <b>13+</b>
     <span>Operating locations</span>
 </div>
 
 <div class="stat">
-    <b>145</b>
+    <b>140+</b>
     <span>Employees & team members</span>
 </div>
 
@@ -797,6 +883,21 @@ footer strong{
 </div>
 
 </div>
+</div>
+</section>
+
+
+<section class="vision" id="vision">
+<div class="container">
+    <div class="vision-box">
+        <div class="eyebrow">Our vision</div>
+        <h2>Growth that creates <span class="vision-highlight">opportunity.</span></h2>
+        <p>
+            We wish to create <span class="vision-highlight">employment</span>,
+            develop strong local teams and build a growing network where people,
+            customers and communities move forward together.
+        </p>
+    </div>
 </div>
 </section>
 
@@ -861,7 +962,7 @@ footer strong{
 
 <img
     src="assets/images/rajasekhar.jpg"
-    alt="Rajasekhar P - Managing Partner"
+    alt="Rajasekhar Putumbaka - Managing Partner"
 >
 
 <div class="person-body">
@@ -871,7 +972,7 @@ footer strong{
 </div>
 
 <h3>
-    Rajasekhar P
+    Rajasekhar Putumbaka
 </h3>
 
 <p>
@@ -947,9 +1048,12 @@ footer strong{
 
 <div class="locations">
 
-<div class="location">
-    <div class="place">Bhimavaram</div>
-    <div class="date">Opened 07 Feb 2025</div>
+<div class="location" onclick="openLocation('Bhimavaram')">
+
+<div class="place">
+    Bhimavaram
+</div>
+    <div class="date">Feb 2025</div>
 
     <div class="details">
         <div class="detail">
@@ -967,12 +1071,14 @@ footer strong{
 </div>
 
 
-<div class="location">
+<div class="location" onclick="openLocation('Stock Yard')">
 
-<div class="place">Stock Yard</div>
+<div class="place">
+    Stock Yard
+</div>
 
 <div class="date">
-    Opened 24 Jan 2025
+    Jan 2025
 </div>
 
 <div class="details">
@@ -996,12 +1102,14 @@ footer strong{
 </div>
 
 
-<div class="location">
+<div class="location" onclick="openLocation('Tadepalligudem')">
 
-<div class="place">Tadepalligudem</div>
+<div class="place">
+    Tadepalligudem
+</div>
 
 <div class="date">
-    Opened 14 Feb 2025
+    Feb 2025
 </div>
 
 <div class="details">
@@ -1025,12 +1133,14 @@ footer strong{
 </div>
 
 
-<div class="location">
+<div class="location" onclick="openLocation('Eluru')">
 
-<div class="place">Eluru</div>
+<div class="place">
+    Eluru
+</div>
 
 <div class="date">
-    Opened 15 Mar 2025
+    Mar 2025
 </div>
 
 <div class="details">
@@ -1054,12 +1164,14 @@ footer strong{
 </div>
 
 
-<div class="location">
+<div class="location" onclick="openLocation('Jangareddygudem')">
 
-<div class="place">Jangareddygudem</div>
+<div class="place">
+    Jangareddygudem
+</div>
 
 <div class="date">
-    Opened 15 Mar 2025
+    Mar 2025
 </div>
 
 <div class="details">
@@ -1083,12 +1195,14 @@ footer strong{
 </div>
 
 
-<div class="location">
+<div class="location" onclick="openLocation('Digamarru')">
 
-<div class="place">Digamarru</div>
+<div class="place">
+    Digamarru
+</div>
 
 <div class="date">
-    Opened 10 Apr 2025
+    Apr 2025
 </div>
 
 <div class="details">
@@ -1112,12 +1226,14 @@ footer strong{
 </div>
 
 
-<div class="location">
+<div class="location" onclick="openLocation('Kovvuru')">
 
-<div class="place">Kovvuru</div>
+<div class="place">
+    Kovvuru
+</div>
 
 <div class="date">
-    Opened 10 Apr 2025
+    Apr 2025
 </div>
 
 <div class="details">
@@ -1141,12 +1257,14 @@ footer strong{
 </div>
 
 
-<div class="location">
+<div class="location" onclick="openLocation('Tanuku')">
 
-<div class="place">Tanuku</div>
+<div class="place">
+    Tanuku
+</div>
 
 <div class="date">
-    Opened 15 May 2025
+    May 2025
 </div>
 
 <div class="details">
@@ -1170,12 +1288,14 @@ footer strong{
 </div>
 
 
-<div class="location">
+<div class="location" onclick="openLocation('Chintalapudi')">
 
-<div class="place">Chintalapudi</div>
+<div class="place">
+    Chintalapudi
+</div>
 
 <div class="date">
-    Opened 25 Aug 2025
+    Aug 2025
 </div>
 
 <div class="details">
@@ -1211,14 +1331,14 @@ footer strong{
 
 <div class="locations">
 
-<div class="location">
+<div class="location" onclick="openLocation('Mahabubnagar')">
 
 <div class="place">
     Mahabubnagar
 </div>
 
 <div class="date">
-    Opened 02 Apr 2026
+    Apr 2026
 </div>
 
 <div class="details">
@@ -1240,14 +1360,14 @@ footer strong{
 </div>
 
 
-<div class="location">
+<div class="location" onclick="openLocation('Stock Yard')">
 
 <div class="place">
     Stock Yard
 </div>
 
 <div class="date">
-    Opened 02 Apr 2026
+    Apr 2026
 </div>
 
 <div class="details">
@@ -1271,14 +1391,14 @@ footer strong{
 </div>
 
 
-<div class="location">
+<div class="location" onclick="openLocation('Nagarkurnool')">
 
 <div class="place">
     Nagarkurnool
 </div>
 
 <div class="date">
-    Opened 07 Apr 2026
+    Apr 2026
 </div>
 
 <div class="details">
@@ -1302,14 +1422,14 @@ footer strong{
 </div>
 
 
-<div class="location">
+<div class="location" onclick="openLocation('Kalvakurthy')">
 
 <div class="place">
     Kalvakurthy
 </div>
 
 <div class="date">
-    Opened 07 Apr 2026
+    Apr 2026
 </div>
 
 <div class="details">
@@ -1333,14 +1453,14 @@ footer strong{
 </div>
 
 
-<div class="location">
+<div class="location" onclick="openLocation('Gadwal')">
 
 <div class="place">
     Gadwal
 </div>
 
 <div class="date">
-    Opened 07 May 2026
+    May 2026
 </div>
 
 <div class="details">
@@ -1364,14 +1484,14 @@ footer strong{
 </div>
 
 
-<div class="location">
+<div class="location" onclick="openLocation('Kosgi')">
 
 <div class="place">
     Kosgi
 </div>
 
 <div class="date">
-    Opened 09 May 2026
+    May 2026
 </div>
 
 <div class="details">
@@ -1395,14 +1515,14 @@ footer strong{
 </div>
 
 
-<div class="location">
+<div class="location" onclick="openLocation('Wanaparthy')">
 
 <div class="place">
     Wanaparthy
 </div>
 
 <div class="date">
-    Opened 08 May 2026
+    May 2026
 </div>
 
 <div class="details">
@@ -1516,6 +1636,51 @@ footer strong{
 </div>
 
 </div>
+</div>
+
+<div class="five-fingers-caption">
+    “When five fingers work together, a hand can move the world.”
+    <span>Customers • OEMs • Government • Bankers • Financiers</span>
+</div>
+</div>
+</section>
+
+
+
+<section class="dashboard" id="sales-dashboard">
+<div class="container">
+    <div class="section-head">
+        <div class="eyebrow">Sales dashboard</div>
+        <h2>Two dealerships. One growth direction.</h2>
+        <p>
+            A strategic snapshot of dealership performance. The numbers below are
+            intentionally left as placeholders for your final business figures.
+        </p>
+    </div>
+
+    <div class="dashboard-grid">
+        <div class="dealer-dashboard">
+            <h3>Bhimavaram</h3>
+            <div class="dashboard-subtitle">West Godavari • Established 2025</div>
+            <div class="kpis">
+                <div class="kpi"><strong>ADD</strong><small>Vehicles Sold</small></div>
+                <div class="kpi"><strong>ADD</strong><small>Sales Value</small></div>
+                <div class="kpi"><strong>ADD</strong><small>Customer Enquiries</small></div>
+                <div class="kpi"><strong>ADD</strong><small>Finance Cases</small></div>
+            </div>
+        </div>
+
+        <div class="dealer-dashboard">
+            <h3>Mahabubnagar</h3>
+            <div class="dashboard-subtitle">Telangana • Established 2026</div>
+            <div class="kpis">
+                <div class="kpi"><strong>ADD</strong><small>Vehicles Sold</small></div>
+                <div class="kpi"><strong>ADD</strong><small>Sales Value</small></div>
+                <div class="kpi"><strong>ADD</strong><small>Customer Enquiries</small></div>
+                <div class="kpi"><strong>ADD</strong><small>Finance Cases</small></div>
+            </div>
+        </div>
+    </div>
 </div>
 </section>
 
@@ -1631,7 +1796,7 @@ footer strong{
     href="tel:+919885185546"
     style="color:#9a6d22;font-weight:700"
 >
-    +91 98851 85543
+    +91 98851 85546
 </a>
 
 </p>
@@ -1725,7 +1890,99 @@ footer strong{
 </footer>
 
 
+
+<div class="location-modal" id="locationModal" onclick="closeLocation(event)">
+    <div class="location-modal-card" onclick="event.stopPropagation()">
+        <div class="location-modal-head">
+            <h3 id="modalLocationName">Location</h3>
+            <button class="location-modal-close" type="button" onclick="closeLocation()">×</button>
+        </div>
+        <div class="location-modal-body">
+            <div class="location-hours">Open daily • 9:00 AM – 7:00 PM</div>
+            <div id="modalMapArea">
+                <div class="map-placeholder">
+                    <div>
+                        <strong>Google Maps location</strong>
+                        Paste your Google Maps <b>embed URL</b> in the location data below.
+                    </div>
+                </div>
+            </div>
+            <h4 class="showroom-title">Showroom & facility</h4>
+            <div class="showroom-images" id="modalImages">
+                <div class="image-placeholder">PASTE SHOWROOM IMAGE 1</div>
+                <div class="image-placeholder">PASTE SHOWROOM IMAGE 2</div>
+                <div class="image-placeholder">PASTE SHOWROOM IMAGE 3</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <script>
+
+
+/*
+    ===== LOCATION DATA =====
+    Paste a Google Maps EMBED URL and showroom image paths here.
+    Example:
+      map: "https://www.google.com/maps/embed?pb=PASTE_YOUR_EMBED_CODE"
+      images: ["assets/images/showroom-1.jpg","assets/images/showroom-2.jpg"]
+*/
+const LOCATION_DATA = {
+    "Bhimavaram": { map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3824.4445187973056!2d81.50732839999999!3d16.554117899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a3632a8e3cb7017%3A0x7b413faa31da0aa4!2sDHARANI%20MOTORS%2C%20Narasimhapuram%2C%20Bhimavaram%2C%20Andhra%20Pradesh%20534202!5e0!3m2!1sen!2sin!4v1790253755847!5m2!1sen!2sin", images: [] },
+    "Stock Yard": { map: "PASTE_STOCK_YARD_GOOGLE_MAPS_EMBED_URL_HERE", images: [] },
+    "Tadepalligudem": { map: "PASTE_TADEPALLIGUDEM_GOOGLE_MAPS_EMBED_URL_HERE", images: [] },
+    "Eluru": { map: "PASTE_ELURU_GOOGLE_MAPS_EMBED_URL_HERE", images: [] },
+    "Jangareddygudem": { map: "PASTE_JANGAREDDYGUDEM_GOOGLE_MAPS_EMBED_URL_HERE", images: [] },
+    "Digamarru": { map: "PASTE_DIGAMARRU_GOOGLE_MAPS_EMBED_URL_HERE", images: [] },
+    "Kovvuru": { map: "PASTE_KOVVURU_GOOGLE_MAPS_EMBED_URL_HERE", images: [] },
+    "Tanuku": { map: "PASTE_TANUKU_GOOGLE_MAPS_EMBED_URL_HERE", images: [] },
+    "Chintalapudi": { map: "PASTE_CHINTALAPUDI_GOOGLE_MAPS_EMBED_URL_HERE", images: [] },
+    "Mahabubnagar": { map: "PASTE_MAHABUBNAGAR_GOOGLE_MAPS_EMBED_URL_HERE", images: [] },
+    "Nagarkurnool": { map: "PASTE_NAGARKURNOOL_GOOGLE_MAPS_EMBED_URL_HERE", images: [] },
+    "Kalvakurthy": { map: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3822.1253971551423!2d78.49374887514882!3d16.67060728409951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1790254126214!5m2!1sen!2sin", images: [] },
+    "Gadwal": { map: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3830.9566228037315!2d77.81439787513924!3d16.222669584479203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1790253232995!5m2!1sen!2sin", images: [] },
+    "Kosgi": { map: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3815.8821737504463!2d77.72051487515577!3d16.980345083839097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1790254023797!5m2!1sen!2sin", images: [] },
+    "Wanaparthy": { map: "https://www.google.com/maps/place/Wanaparthy,+Telangana+509103/@16.3602962,78.0615005,17z/data=!4m6!3m5!1s0x3bca0521c97f2409:0x4551d8fd6c7aeef!8m2!3d16.3623208!4d78.0621475!16zL20vMGY2cDgx?hl=en&entry=ttu&g_ep=EgoyMDI2MDkyMS4wIKXMDSoASAFQAw%3D%3D", images: [] }
+};
+
+function openLocation(locationName){
+    const modal = document.getElementById("locationModal");
+    const name = document.getElementById("modalLocationName");
+    const mapArea = document.getElementById("modalMapArea");
+    const imagesArea = document.getElementById("modalImages");
+    const data = LOCATION_DATA[locationName] || {map:"", images:[]};
+
+    name.textContent = locationName;
+
+    if(data.map && !data.map.startsWith("PASTE_")){
+        mapArea.innerHTML = `<iframe class="map-frame" src="${data.map}" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"></iframe>`;
+    } else {
+        mapArea.innerHTML = `<div class="map-placeholder"><div><strong>Google Maps location</strong>Paste the Google Maps <b>embed URL</b> for ${locationName} in <b>LOCATION_DATA</b>.</div></div>`;
+    }
+
+    if(data.images && data.images.length){
+        imagesArea.innerHTML = data.images.map((src,index) => `<img src="${src}" alt="${locationName} showroom ${index+1}">`).join("");
+    } else {
+        imagesArea.innerHTML = `<div class="image-placeholder">PASTE SHOWROOM IMAGE 1</div><div class="image-placeholder">PASTE SHOWROOM IMAGE 2</div><div class="image-placeholder">PASTE SHOWROOM IMAGE 3</div>`;
+    }
+
+    modal.classList.add("open");
+    document.body.style.overflow = "hidden";
+}
+
+function closeLocation(event){
+    if(event && event.target !== document.getElementById("locationModal")) return;
+    document.getElementById("locationModal").classList.remove("open");
+    document.body.style.overflow = "";
+}
+
+document.addEventListener("keydown", function(e){
+    if(e.key === "Escape"){
+        document.getElementById("locationModal").classList.remove("open");
+        document.body.style.overflow = "";
+    }
+});
 
 document.getElementById("year").textContent =
     new Date().getFullYear();
